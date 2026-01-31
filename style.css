@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,900|Six+Caps');
+
+:root {
+  --six-caps: "Six Caps", sans-serif;
+  --merriweather: "Merriweather", serif;
+
+  --ff-base: var(--merriweather);
+  --ff-alt: var(--six-caps);
+
+  --fs-base: 1rem;
+  --fs-h1: 3.75rem;
+  --fs-h2: 2.875rem;
+  --fs-h3: 2.25rem;
+  --fs-xl: 6rem;
+
+  --black: #252525;
+  --yellow: #e9d20f;
+  --light-gray: #c2c2c2;
+  --dark-gray: #e8e8e8;
+  --white: #fff;
+}
+
+body {
+  margin: 0; /* recomendado para que se parezca más al demo */
+  font-family: var(--ff-base);
+  font-size: var(--fs-base);
+  font-weight: 300;
+  color: var(--black);
+
+  line-height: 1.6;
+
+  display: grid;
+  grid-template:
+    "header header header header" 10em
+    "hero hero hero hero" 50vh
+    ". main sidebar ." auto
+    "footer footer footer footer" 10em
+    / 1fr minmax(30em, 5fr) minmax(15em, 2fr) 1fr;
+
+  column-gap: 1.5em;
+}
+
+header {
+  grid-area: header;
+}
+
+.hero {
+  grid-area: hero; /* <-- esto faltaba */
+  background: url(https://images.pexels.com/photos/18620050/pexels-photo-18620050.jpeg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: sidebar;
+  background: var(--dark-gray);
+  padding: 2em;
+  margin: 1em 0;
+}
+
+footer {
+  grid-area: footer;
+}
+
+header,
+footer {
+  background: var(--black);
+  color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title,
+.footer-title {
+  font-family: var(--ff-alt);
+  font-size: var(--fs-h2);
+  color: var(--yellow);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin: 0;
+}
+
+.hero-title {
+  font-family: var(--ff-alt);
+  font-size: var(--fs-xl);
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-family: var(--ff-base);
+  font-size: var(--fs-h2);
+  font-weight: 300;
+  color: var(--white);
+  margin: 0;
+}
+
+/* Cards */
+.card {
+  display: grid;
+  grid-template:
+    "img title" min-content
+    "img content" auto / 1fr 3fr;
+  column-gap: 1.5em;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.card-img {
+  grid-area: img;
+  max-width: 100%;
+}
+
+.card-title {
+  grid-area: title;
+  margin: 0;
+  font-weight: 300;
+}
+
+.card-content {
+  grid-area: content;
+}
+
+.card-content a {
+  color: var(--yellow);
+  font-size: 1.1em;
+}
