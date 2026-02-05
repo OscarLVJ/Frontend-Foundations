@@ -18,6 +18,9 @@ Proyectos para practicar **CSS Grid**, **Responsive Design** y **Flexbox**.
 - **Media Queries** — layout responsive (mobile first)  
   Carpeta: `Responsive-Design/media-queries/`  
   Live: https://oscarlvj.github.io/CSS/Responsive-Design/media-queries/
+- **Mobile First Challenge (MDN)** — menú responsive, sticky nav y grid  
+  Carpeta: `Responsive-Design/mobile-first/`  
+  Live: https://oscarlvj.github.io/CSS/Responsive-Design/mobile-first/
 
 ### Flexbox
 - (próximamente)
