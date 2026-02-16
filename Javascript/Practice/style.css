@@ -1,0 +1,82 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url("./img/clouds.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+@media (max-width: 480px){
+  body{
+    background-size: cover;
+    background-position: center top;
+    background-color: #44677d;
+    min-height: 100vh;
+  }
+}
+@media (max-width: 1040px){
+  body{
+    background-size: cover;
+    background-position: center top;
+    background-color: #44677d;
+    min-height: 100vh;
+  }
+}
+div {
+  max-width: fit-content;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 35vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+h2 {
+  font-size: 50px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+button {
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #dae9f7;
+  cursor: pointer;
+  font-weight: bold;
+  width: 200px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  font-size: 0.7em;
+}
+
+#increment-btn {
+  background-color: #2564ebe4;
+}
+#increment-btn:hover {
+  background-color: #1f58f4;
+}
+#save-btn {
+  background-color: #1a40aad1;
+}
+#save-btn:hover {
+  background-color: #2d4589;
+}
+p{
+    color: #223768;
+}
